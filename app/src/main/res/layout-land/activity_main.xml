@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.example.eigenaar.tictactoe.MainActivity">
 
     <GridLayout
         android:layout_width="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="5dp"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="2dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:columnCount="3">
 
         <Button
             android:id="@+id/button00"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
@@ -28,47 +28,47 @@
 
         <Button
             android:id="@+id/button01"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:background="#B0BEC5"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button02"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginBottom="5dp"
             android:background="#B0BEC5"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:background="#B0BEC5"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button11"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:background="#B0BEC5"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button12"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginBottom="5dp"
             android:background="#B0BEC5"
@@ -76,8 +76,8 @@
 
         <Button
             android:id="@+id/button20"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginRight="5dp"
             android:background="#B0BEC5"
@@ -85,8 +85,8 @@
 
         <Button
             android:id="@+id/button21"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginRight="5dp"
             android:background="#B0BEC5"
@@ -94,8 +94,8 @@
 
         <Button
             android:id="@+id/button22"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:onClick="tileClicked"
             android:layout_marginRight="5dp"
             android:background="#B0BEC5"
