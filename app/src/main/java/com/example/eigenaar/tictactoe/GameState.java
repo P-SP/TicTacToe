@@ -1,7 +1,7 @@
 package com.example.eigenaar.tictactoe;
 
 /**
- * Created by Eigenaar on 12-2-2018.
+ * Enum class for the status of a game.
  */
 
 public enum GameState {

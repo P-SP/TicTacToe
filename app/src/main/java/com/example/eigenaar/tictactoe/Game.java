@@ -1,22 +1,20 @@
 package com.example.eigenaar.tictactoe;
-import android.util.Log;
 
 import java.io.Serializable;
 
 /**
- * Created by Eigenaar on 12-2-2018.
+ * Class for a game.
  */
 
 public class Game implements Serializable{
 
-    // eigenschappen...
+    // properties
     final private int BOARD_SIZE = 3;
     private Tile[][] board;
     private Boolean playerOneTurn;  // true if player 1's turn, false if player 2's turn
     private int movesPlayed = 0;
-    private Boolean gameOver;
 
-    // constructor
+    // constructor (given)
     public Game() {
         board = new Tile[BOARD_SIZE][BOARD_SIZE];
         for(int i=0; i<BOARD_SIZE; i++)
@@ -24,16 +22,14 @@ public class Game implements Serializable{
                 board[i][j] = Tile.BLANK;
 
         playerOneTurn = true;
-        gameOver = false;
-        // GameState status = GameState.IN_PROGRESS;                NIET NODIG HIER TOCH?
     }
 
+    // function which updates a tile if its a valid tile
     public Tile draw(int row, int column) {
         if (board[row][column].equals(Tile.BLANK)) {
             if (playerOneTurn) {
                 board[row][column] = Tile.CROSS;
                 playerOneTurn = false;
-                // hier if statement if(computer) --> return board[row][col], tile_comp
             }
             else {
                 board[row][column] = Tile.CIRCLE;
@@ -47,13 +43,13 @@ public class Game implements Serializable{
         return board[row][column];
     }
 
+    // function that gets the value of the tile in a specific row and column
     public Tile tileContent(int row, int column){
-        // get value of the tile in the specific row and column
         return board[row][column];
     }
 
     public GameState gameWon() {
-        // check if possible to have a winner
+        // check if it is possible to have a winner
         if (movesPlayed < 5) {
             return GameState.IN_PROGRESS;
         }
@@ -61,7 +57,7 @@ public class Game implements Serializable{
         for (int i = 0; i < BOARD_SIZE; i++) {
             // check horizontal
             if (board[i][0].equals(board[i][1]) && board[i][0].equals(board[i][2])){
-                if (board[i][0].equals(Tile.CROSS)){                                            // KAN DEZE IF IN 1 KEER IPV 3X ZOALS HIERONDER?
+                if (board[i][0].equals(Tile.CROSS)){
                     return GameState.PLAYER_ONE;
                 }
                 else if (board[i][0].equals(Tile.CIRCLE)) {
